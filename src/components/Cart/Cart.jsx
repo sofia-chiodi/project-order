@@ -2,7 +2,7 @@ import './cart.css';
 
 const Cart = ({ itemCounter, openCart }) => {
   return (
-    <div>
+    <div className='cart-container'>
       <h2 onClick={openCart}>Cart ({itemCounter})</h2>
     </div>
   );
