@@ -1,6 +1,7 @@
 import './header.css';
 import Logo from '../Logo/Logo';
 import Cart from '../Cart/Cart';
+import Button from '../Button/Button';
 
 const Header = () => {
   function handleOpenCart() {
@@ -11,7 +12,7 @@ const Header = () => {
     <>
       <div className='header-container'>
         <Logo title='REACTFOOD' />
-        <Cart itemCounter={5} openCart={handleOpenCart} />
+        <Button label='Cart (0)' textOnly></Button>
       </div>
     </>
   );
