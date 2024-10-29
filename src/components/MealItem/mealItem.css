@@ -1,0 +1,41 @@
+.meal-container {
+  background-color: #1d1a16;
+  border-radius: 5%;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+.meal-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.meal-card img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.meal-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0.75rem 0;
+}
+
+.meal-description {
+  margin: 1rem;
+}
+
+.meal-price {
+  display: inline-block;
+  background-color: #312c1d;
+  color: #ffc404;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 0.5rem 2rem;
+  margin: 0 30%;
+  border-radius: 4px;
+}
