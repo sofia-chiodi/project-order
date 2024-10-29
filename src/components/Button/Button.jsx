@@ -1,11 +1,11 @@
 import './Button.css';
 
-const Button = ({ label, textOnly, className, ...props }) => {
+const Button = ({ children, textOnly, className, ...props }) => {
   let cssClasses = textOnly ? `text-button ${className}` : 'button';
   cssClasses += ' ' + className;
   return (
     <button className={cssClasses} {...props}>
-      {label}
+      {children}
     </button>
   );
 };
