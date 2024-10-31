@@ -22,7 +22,7 @@ export default function Cart() {
   }
 
   return (
-    <Modal open={userProgressCtx.progress === 'cart'}>
+    <Modal className='cart' open={userProgressCtx.progress === 'cart'}>
       <h2>Your Cart</h2>
       <ul>
         {cartCtx.items.map((item) => (
@@ -32,12 +32,12 @@ export default function Cart() {
             quantity={item.quantity}
             price={item.price}
             onIncrease={() => cartCtx.addItem(item)}
-            onIDecrease={() => cartCtx.removeItem(item.id)}
+            onDecrease={() => cartCtx.removeItem(item.id)}
           />
         ))}
       </ul>
-      <p>{currencyFormatter.format(cartTotal)}</p>
-      <p>
+      <p className='cart-total'>{currencyFormatter.format(cartTotal)}</p>
+      <p className='cart-buttons'>
         <Button textOnly onClick={handleCloseCart}>
           Close
         </Button>
