@@ -17,18 +17,20 @@ function cartReducer(state, action) {
     if (existingCartItemIndex > -1) {
       const existingItem = state.items[existingCartItemIndex];
       const updatedItem = {
-        ...state.items[existingCartItemIndex],
+        ...existingItem,
         quantity: existingItem.quantity + 1,
       };
       updatedItems[existingCartItemIndex] = updatedItem;
     } else {
       updatedItems.push({ ...action.item, quantity: 1 });
     }
+
     return { ...state, items: updatedItems };
   }
+
   if (action.type === 'REMOVE_ITEM') {
     const existingCartItemIndex = state.items.findIndex(
-      (item) => item.id === action.item.id
+      (item) => item.id === action.id
     );
     const existingCartItem = state.items[existingCartItemIndex];
 
